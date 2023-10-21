@@ -1,0 +1,3 @@
+we are using bootstrap
+we are using ui-avatar for images
+create seperate files for each component

@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+//importing style file for using them directly here in js
+import "./CSS/style.css";
+import { Header, SubHeader } from "./Header";
+import { Footer } from "./Footer";
+import { Students } from "./Students";
+import { MainBody, SecondBody } from "./MainBody";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+/*
+ * We can create our customised style and use them directly under the style for each component
+ */
+export const subHeaderStyle = {
+  color: "black",
+  backgroundColor: "lightgray",
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div>
+    <Header />
+    <SubHeader />
+    <MainBody />
+    <SecondBody />
+    <Students />
+    <Footer />
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
